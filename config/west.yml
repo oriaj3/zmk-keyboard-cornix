@@ -33,7 +33,7 @@ manifest:
       clone-depth: 1
     - name: zmk-dongle-screen
       remote: bwshockley
-      revision: main
+      revision: dynamic_layers
     - name: prospector-zmk-module
       remote: carrefinho
       revision: main

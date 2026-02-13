@@ -6,6 +6,7 @@
 
 #include "zmk-helpers/helper.h"
 #include "includes/cornix54.h"
+#include "macros.dtsi"
 
 #define HM_TAPPING_TERM 250
 #define HM_TAPPING_REPEAT 210

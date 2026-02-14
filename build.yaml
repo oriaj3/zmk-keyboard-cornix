@@ -49,7 +49,7 @@ include:
   - board: seeeduino_xiao_ble
     shield: cornix_prospector dongle_screen
     snippet: studio-rpc-usb-uart
-    cmake-args: -DCONFIG_ZMK_STUDIO=y
+    cmake-args: -DCONFIG_ZMK_STUDIO=y -DZMK_EXTRA_MODULES_PATH="/github/workspace/zmk-dongle-screen"    
     artifact-name: zmk_dongle_screen
 
   - board: seeeduino_xiao_ble

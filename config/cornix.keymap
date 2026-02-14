@@ -12,6 +12,9 @@
 #include "zmk-helpers/helper.h"
 #include "includes/cornix54.h"
 
+&left_encoder { status = "okay"; };
+&right_encoder { status = "okay"; };
+
 / {
     macros {
         vial_macro0: vial_macro0 {

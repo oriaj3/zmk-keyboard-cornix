@@ -7,7 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/mouse.h> // Necesario para botones de ratón
+#include <dt-bindings/zmk/mouse.h>
 
 #include "zmk-helpers/helper.h"
 #include "includes/cornix54.h"
@@ -17,7 +17,6 @@
         vial_macro0: vial_macro0 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            // Corregido: Uso de códigos estándar para "13.Gato"
             bindings = <&kp N1 &kp N3 &kp DOT &kp G &kp A &kp T &kp O &kp RA(N2) &kp N2>;
         };
     };
@@ -84,9 +83,8 @@
 &none      &none         &none        &none           &none     &none                                       &none      &none      &none      &none      &none         &none
             >;
 
-            sensor-bindings = 
-                <&inc_dec_kp LC(RIGHT) LC(LEFT)>,   // Encóder izquierdo: Palabras (Siguiente/Anterior)
-                <&inc_dec_kp LC(DOWN) LC(UP)>;      // Encóder derecho: Párrafos (Abajo/Arriba)
+            // IZQ: Palabras (Ctrl+Flechas) | DER: Párrafos (Ctrl+Arriba/Abajo)
+            sensor-bindings = <&inc_dec_kp LC(RIGHT) LC(LEFT)>, <&inc_dec_kp LC(DOWN) LC(UP)>;
         };
 
         green_layer {
@@ -110,8 +108,8 @@
 &bt BT_SEL 2 &none       &bt BT_SEL 4 &none           &none    &none                                        &none     &none    &none     &bt BT_SEL 3 &none       &none
             >;
 
-            sensor-bindings = 
-                <&inc_dec_kp F24 F23>,              // Encóder izquierdo: Brillo (Subir/Bajar)
-                <&inc_dec_kp F24 F23>;              // Encóder derecho: Brillo (Subir/Bajar)        };
+            // Brillo del Dongle: F24 (Subir) / F23 (Bajar) 
+            sensor-bindings = <&inc_dec_kp F24 F23>, <&inc_dec_kp F24 F23>;
+        };
     };
 };
